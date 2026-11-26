@@ -1,0 +1,30 @@
+{
+  "semantic_shared": [],
+  "language_control": [],
+  "language_specific_strategy": [
+    {
+      "flat_head_idx": 214,
+      "layer": 26,
+      "patch_unit": 6,
+      "f_lang": 0.003866360195003298,
+      "f_question": 0.17412149936838003,
+      "f_interaction": 0.8220121404366606
+    },
+    {
+      "flat_head_idx": 111,
+      "layer": 13,
+      "patch_unit": 7,
+      "f_lang": 0.0005924921664021068,
+      "f_question": 0.17740273418057706,
+      "f_interaction": 0.8220047736530413
+    },
+    {
+      "flat_head_idx": 223,
+      "layer": 27,
+      "patch_unit": 7,
+      "f_lang": 0.0012402781155953313,
+      "f_question": 0.17780651193408667,
+      "f_interaction": 0.8209532099503131
+    }
+  ]
+}

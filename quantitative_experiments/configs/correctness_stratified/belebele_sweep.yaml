@@ -1,0 +1,63 @@
+model:
+  name_or_path: Qwen/Qwen3-8B
+  revision: null
+  trust_remote_code: true
+  dtype: auto
+  attn_implementation: null
+
+data:
+  dataset_name: facebook/belebele
+  subsets: [acm_Arab, eng_Latn, deu_Latn, rus_Cyrl, spa_Latn]
+  subset: null
+  split: test
+  question_field: question
+  context_field: flores_passage
+  option_fields: [mc_answer1, mc_answer2, mc_answer3, mc_answer4]
+  answer_field: null
+  answer_index_field: correct_answer_num
+  answer_index_offset: -1
+  id_field: question_id
+  id_fields: [link, question_number]
+  id_separator: "::"
+  parallel_id_field: question_id
+  allowed_parallel_ids_path: null
+  language_field: dialect
+  languages: [acm_Arab, eng_Latn, deu_Latn, rus_Cyrl, spa_Latn]
+  max_parallel_questions: null
+  max_samples: null
+  seed: 42
+  cache_dir: null
+  drop_columns: [ds]
+
+eval:
+  option_labels: [A, B, C, D]
+  prompt_template: |-
+    Passage: {passage}
+    Question: {question}
+    Options:
+    {options}
+    {answer_prefix}
+  answer_prefix: "Answer:"
+  answer_sep: " "
+  max_input_length: 2048
+
+patching:
+  patch_mode: kv_group
+  target_mode: correct
+  donor_batch_size: 64
+  batch_size: 64
+  choice_order_perturbations:
+    enabled: true
+    num_perturbations: 3
+    include_original: true
+    seed: 42
+
+run:
+  output_dir: outputs/correctness_stratified/belebele
+  device: cuda
+  compute_spearman: false
+  compute_jaccard: false
+  data_parallel: true
+  checkpoint:
+    enabled: true
+    resume: true

@@ -1,0 +1,17 @@
+eval:
+  batch_size: 32
+  max_input_length: 2048
+  option_labels: [A, B, C, D]
+  method: generate
+  generate_batch_size: 6
+  generate_max_new_tokens: 2
+  generate_temperature: 0.0
+  generate_do_sample: false
+  prompt_template: |-
+    Passage: {passage}
+    Question: {question}
+    Options:
+    {options}
+    {answer_prefix}
+  answer_prefix: "Answer:"
+  answer_sep: " "

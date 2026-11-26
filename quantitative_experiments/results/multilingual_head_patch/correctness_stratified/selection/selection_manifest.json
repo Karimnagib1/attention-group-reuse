@@ -1,0 +1,111 @@
+{
+  "conditions": [
+    {
+      "available_by_k": {
+        "0": 43,
+        "1": 49,
+        "2": 68,
+        "3": 103,
+        "4": 257,
+        "5": 380
+      },
+      "available_questions": 900,
+      "condition_id": "llama_belebele",
+      "dataset": "Belebele",
+      "dataset_config": "/home/kareem.elzeky/thesis3/quantitative_experiments/configs/correctness_stratified/belebele_sweep.yaml",
+      "model": "Llama-3.1-8B",
+      "predictions_path": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/belebele/predictions.jsonl",
+      "selected_by_k": {
+        "0": 43,
+        "1": 49,
+        "2": 68,
+        "3": 103,
+        "4": 250,
+        "5": 250
+      },
+      "selected_questions": 763,
+      "sweep_output_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/belebele/multilingual_head_patch/correctness_stratified"
+    },
+    {
+      "available_by_k": {
+        "0": 5923,
+        "1": 1583,
+        "2": 1056,
+        "3": 871,
+        "4": 906,
+        "5": 1420
+      },
+      "available_questions": 11759,
+      "condition_id": "llama_mmluprox",
+      "dataset": "MMLU-ProX",
+      "dataset_config": "/home/kareem.elzeky/thesis3/quantitative_experiments/configs/correctness_stratified/mmluprox_sweep.yaml",
+      "model": "Llama-3.1-8B",
+      "predictions_path": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/mmluprox/predictions.jsonl",
+      "selected_by_k": {
+        "0": 250,
+        "1": 250,
+        "2": 250,
+        "3": 250,
+        "4": 250,
+        "5": 250
+      },
+      "selected_questions": 1500,
+      "sweep_output_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/mmluprox/multilingual_head_patch/correctness_stratified"
+    },
+    {
+      "available_by_k": {
+        "0": 32,
+        "1": 30,
+        "2": 42,
+        "3": 62,
+        "4": 256,
+        "5": 478
+      },
+      "available_questions": 900,
+      "condition_id": "qwen_belebele",
+      "dataset": "Belebele",
+      "dataset_config": "/home/kareem.elzeky/thesis3/quantitative_experiments/configs/correctness_stratified/belebele_sweep.yaml",
+      "model": "Qwen3-8B",
+      "predictions_path": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/belebele/predictions.jsonl",
+      "selected_by_k": {
+        "0": 32,
+        "1": 30,
+        "2": 42,
+        "3": 62,
+        "4": 250,
+        "5": 250
+      },
+      "selected_questions": 666,
+      "sweep_output_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/belebele/multilingual_head_patch/correctness_stratified"
+    },
+    {
+      "available_by_k": {
+        "0": 5016,
+        "1": 1606,
+        "2": 1148,
+        "3": 996,
+        "4": 1154,
+        "5": 1839
+      },
+      "available_questions": 11759,
+      "condition_id": "qwen_mmluprox",
+      "dataset": "MMLU-ProX",
+      "dataset_config": "/home/kareem.elzeky/thesis3/quantitative_experiments/configs/correctness_stratified/mmluprox_sweep.yaml",
+      "model": "Qwen3-8B",
+      "predictions_path": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/mmluprox/predictions.jsonl",
+      "selected_by_k": {
+        "0": 250,
+        "1": 250,
+        "2": 250,
+        "3": 250,
+        "4": 250,
+        "5": 250
+      },
+      "selected_questions": 1500,
+      "sweep_output_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/mmluprox/multilingual_head_patch/correctness_stratified"
+    }
+  ],
+  "config_path": "/home/kareem.elzeky/thesis3/quantitative_experiments/configs/correctness_stratified/analysis.yaml",
+  "max_questions_per_k": 250,
+  "selection_seed": 20260720
+}

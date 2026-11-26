@@ -1,0 +1,72 @@
+paths:
+  quantitative_root: ../..
+  selection_root: ../../results/multilingual_head_patch/correctness_stratified/selection
+  analysis_output_dir: ../../results/multilingual_head_patch/correctness_stratified/analysis
+
+selection:
+  # Positive integer: deterministic maximum selected independently within each K=0,...,5 stratum.
+  # null: select every balanced question. The preparation CLI also supports --no-cap.
+  max_questions_per_k: 250
+  seed: 20260720
+
+analysis:
+  importance_metric: pct_var_mean_incorrect
+  jaccard_k: 10
+  ci_level: 0.95
+  bootstrap_resamples: 10000
+  permutation_draws: 10000
+  bootstrap_seed: 42
+  permutation_seed: 123
+  bootstrap_block_size: 256
+  min_cell_questions: 10
+  confidence_caliper_sd: 0.5
+  difficulty_caliper_sd: 1.0
+
+conditions:
+  - id: llama_belebele
+    model: Llama-3.1-8B
+    model_family: llama
+    dataset: Belebele
+    dataset_family: belebele
+    counterpart_condition: qwen_belebele
+    predictions_path: ../../llama_outputs/belebele/predictions.jsonl
+    dataset_config: belebele_sweep.yaml
+    sweep_output_dir: ../../llama_outputs/belebele/multilingual_head_patch/correctness_stratified
+    reference_language: eng_Latn
+    languages: [acm_Arab, eng_Latn, deu_Latn, rus_Cyrl, spa_Latn]
+
+  - id: llama_mmluprox
+    model: Llama-3.1-8B
+    model_family: llama
+    dataset: MMLU-ProX
+    dataset_family: mmluprox
+    counterpart_condition: qwen_mmluprox
+    predictions_path: ../../llama_outputs/mmluprox/predictions.jsonl
+    dataset_config: mmluprox_sweep.yaml
+    sweep_output_dir: ../../llama_outputs/mmluprox/multilingual_head_patch/correctness_stratified
+    reference_language: en
+    languages: [en, ru, es, de, ar]
+
+  - id: qwen_belebele
+    model: Qwen3-8B
+    model_family: qwen
+    dataset: Belebele
+    dataset_family: belebele
+    counterpart_condition: llama_belebele
+    predictions_path: ../../qwen_outputs/belebele/predictions.jsonl
+    dataset_config: belebele_sweep.yaml
+    sweep_output_dir: ../../qwen_outputs/belebele/multilingual_head_patch/correctness_stratified
+    reference_language: eng_Latn
+    languages: [acm_Arab, eng_Latn, deu_Latn, rus_Cyrl, spa_Latn]
+
+  - id: qwen_mmluprox
+    model: Qwen3-8B
+    model_family: qwen
+    dataset: MMLU-ProX
+    dataset_family: mmluprox
+    counterpart_condition: llama_mmluprox
+    predictions_path: ../../qwen_outputs/mmluprox/predictions.jsonl
+    dataset_config: mmluprox_sweep.yaml
+    sweep_output_dir: ../../qwen_outputs/mmluprox/multilingual_head_patch/correctness_stratified
+    reference_language: en
+    languages: [en, ru, es, de, ar]

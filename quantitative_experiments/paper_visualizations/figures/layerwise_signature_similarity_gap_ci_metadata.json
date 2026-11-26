@@ -1,0 +1,64 @@
+{
+  "estimand": "aligned similarity minus the mean cross-language control",
+  "figure_display": "aligned questions and the shuffled cross-language control are shown as separate lines; each shaded band is its question-bootstrap confidence interval",
+  "similarity": "layerwise Spearman correlation of attention-group usage signatures",
+  "cross_language_control": "exact expectation over a uniformly permuted question-identity mapping within each language pair",
+  "within_condition_aggregation": "each question is averaged equally over all unordered language pairs",
+  "across_condition_aggregation": "equal-weight mean of condition estimates within each bootstrap replicate",
+  "uncertainty": {
+    "method": "nonparametric percentile bootstrap",
+    "unit": "parallel-question ID",
+    "dependence_preserved": "all five language versions are kept together",
+    "question_level_control_contribution": "average of the question's row and column means in each cross-language similarity matrix, then averaged over language pairs",
+    "resamples": 10000,
+    "confidence_level": 0.95,
+    "seed": 42,
+    "bounds_aggregation": "interval percentiles are computed after aggregating bootstrap replicates; condition-level interval bounds are not averaged"
+  },
+  "metric": "pct_var_mean_incorrect",
+  "relative_depth_points": 256,
+  "reports": [
+    "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/belebele/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json",
+    "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/mmluprox/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json",
+    "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/belebele/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json",
+    "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/mmluprox/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json"
+  ],
+  "conditions": [
+    {
+      "report": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/belebele/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json",
+      "input_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/belebele/multilingual_head_patch/test",
+      "n_questions": 380,
+      "n_languages": 5,
+      "n_language_pairs": 10,
+      "n_layers": 32,
+      "n_attention_groups_per_layer": 8
+    },
+    {
+      "report": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/mmluprox/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json",
+      "input_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/llama_outputs/mmluprox/multilingual_head_patch/test",
+      "n_questions": 1420,
+      "n_languages": 5,
+      "n_language_pairs": 10,
+      "n_layers": 32,
+      "n_attention_groups_per_layer": 8
+    },
+    {
+      "report": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/belebele/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json",
+      "input_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/belebele/multilingual_head_patch/test",
+      "n_questions": 478,
+      "n_languages": 5,
+      "n_language_pairs": 10,
+      "n_layers": 36,
+      "n_attention_groups_per_layer": 8
+    },
+    {
+      "report": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/mmluprox/multilingual_head_patch/test_baselines_layerwise/baseline_layerwise_report.json",
+      "input_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/mmluprox/multilingual_head_patch/test",
+      "n_questions": 1839,
+      "n_languages": 5,
+      "n_language_pairs": 10,
+      "n_layers": 36,
+      "n_attention_groups_per_layer": 8
+    }
+  ]
+}

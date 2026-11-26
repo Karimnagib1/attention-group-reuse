@@ -1,0 +1,15 @@
+data:
+  dataset_name: li-lab/MMLU-ProX
+  subsets: [en, ru, es, de, ar]
+  subset: null
+  split: test
+  question_field: question
+  option_fields: [option_0, option_1, option_2, option_3, option_4, option_5, option_6, option_7, option_8, option_9]
+  answer_index_field: answer_index
+  answer_field: answer
+  id_field: question_id
+  language_field: language
+  languages: [en, ru, es, de, ar]
+  max_samples: null
+  seed: 42
+  cache_dir: null

@@ -1,0 +1,46 @@
+model:
+  # name_or_path: Qwen/Qwen3-8B
+  name_or_path: meta-llama/Llama-3.1-8B
+  revision: null
+  trust_remote_code: true
+  dtype: auto
+
+data:
+  dataset_name: li-lab/MMLU-ProX
+  subsets: [en, ru, es, de, ar]
+  subset: null
+  split: test
+  question_field: question
+  option_fields: [option_0, option_1, option_2, option_3, option_4, option_5, option_6, option_7, option_8, option_9]
+  answer_index_field: answer_index
+  answer_field: answer
+  id_field: question_id
+  language_field: language
+  languages: [en, ru, es, de, ar]
+  max_samples: null
+  seed: 42
+  cache_dir: null
+
+eval:
+  batch_size: 32
+  max_input_length: 2048
+  option_labels: [A, B, C, D, E, F, G, H, I, J]
+  method: generate
+  generate_batch_size: 6
+  generate_max_new_tokens: 2
+  generate_temperature: 0.0
+  generate_do_sample: false
+  prompt_template: |-
+    Question: {question}
+    Options:
+    {options}
+    {answer_prefix}
+  answer_prefix: "Answer:"
+  answer_sep: " "
+
+
+run:
+  output_dir: llama_outputs/mmluprox
+  save_predictions: True
+  log_every: 100
+  master_port: 29500

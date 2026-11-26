@@ -1,0 +1,16 @@
+{
+  "mode": "head",
+  "n_questions": 50,
+  "selection_seed": 42,
+  "selection": "random.Random(42).sample(sorted(qwen_outputs/mmluprox/all_correct_ids.json), 50)",
+  "question_ids_path": "Preliminary/runs/qwen_mmluprox_50/question_ids.json",
+  "donor_pool": "qwen_outputs/mmluprox/all_correct_ids.json",
+  "donor_pool_size": 1839,
+  "base_config": "configs/multilingual_head_patch/patch/config_mmluprox.yaml",
+  "overrides": [
+    "patching.batch_size=8",
+    "patching.donor_batch_size=8"
+  ],
+  "transformers": "5.0.0",
+  "torch": "2.8.0+cu128"
+}

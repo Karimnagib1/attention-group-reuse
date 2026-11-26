@@ -1,0 +1,55 @@
+{
+  "semantic_shared": [
+    {
+      "flat_head_idx": 146,
+      "layer": 18,
+      "patch_unit": 2,
+      "f_lang": 0.018394782039004964,
+      "f_question": 0.5583620855844477,
+      "f_interaction": 0.42324313237655165
+    },
+    {
+      "flat_head_idx": 106,
+      "layer": 13,
+      "patch_unit": 2,
+      "f_lang": 0.0013113119864217268,
+      "f_question": 0.5515095175514212,
+      "f_interaction": 0.44717917046215466
+    },
+    {
+      "flat_head_idx": 224,
+      "layer": 28,
+      "patch_unit": 0,
+      "f_lang": 0.005718346999160393,
+      "f_question": 0.5456297540655158,
+      "f_interaction": 0.44865189893532553
+    }
+  ],
+  "language_control": [],
+  "language_specific_strategy": [
+    {
+      "flat_head_idx": 11,
+      "layer": 1,
+      "patch_unit": 3,
+      "f_lang": 0.0009052824928294163,
+      "f_question": 0.21858869750741583,
+      "f_interaction": 0.7805060199997494
+    },
+    {
+      "flat_head_idx": 16,
+      "layer": 2,
+      "patch_unit": 0,
+      "f_lang": 0.008659285175505856,
+      "f_question": 0.2446703553493446,
+      "f_interaction": 0.7466703594751493
+    },
+    {
+      "flat_head_idx": 30,
+      "layer": 3,
+      "patch_unit": 6,
+      "f_lang": 0.0013833898302412068,
+      "f_question": 0.2588216234572061,
+      "f_interaction": 0.7397949867125515
+    }
+  ]
+}

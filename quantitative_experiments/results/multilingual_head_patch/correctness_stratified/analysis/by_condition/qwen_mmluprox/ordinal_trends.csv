@@ -1,0 +1,5 @@
+condition_id,model,dataset,metric,outcome,n_questions,k_min,k_max,slope_per_additional_correct_language,ci_low,ci_high,permutation_draws,permutation_exceedances,permutation_p_raw,permutation_p_holm,bootstrap_method
+qwen_mmluprox,Qwen3-8B,MMLU-ProX,spearman,aligned,1500,0,5,0.029413163730729074,0.026761583601399516,0.03204874348735826,,,nan,,multinomial_parallel_question_weights_recomputed
+qwen_mmluprox,Qwen3-8B,MMLU-ProX,spearman,gap,1500,0,5,0.004916350791217634,0.0024307574068178957,0.007411886465688178,10000,2,0.00029997000299970003,0.0005999400059994001,multinomial_parallel_question_weights_recomputed
+qwen_mmluprox,Qwen3-8B,MMLU-ProX,jaccard_at_10,aligned,1500,0,5,0.04232832001552921,0.03939301774266326,0.04522089388072736,,,nan,,multinomial_parallel_question_weights_recomputed
+qwen_mmluprox,Qwen3-8B,MMLU-ProX,jaccard_at_10,gap,1500,0,5,0.0030140496637776413,0.000998980967430886,0.005010591025908218,10000,73,0.007399260073992601,0.007399260073992601,multinomial_parallel_question_weights_recomputed

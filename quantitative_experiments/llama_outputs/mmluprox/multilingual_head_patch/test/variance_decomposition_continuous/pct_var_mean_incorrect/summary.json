@@ -1,0 +1,37 @@
+{
+  "metric": "pct_var_mean_incorrect",
+  "analysis": "variance_decomposition_continuous",
+  "normalization": "rank_percentile",
+  "epsilon": 1e-08,
+  "n_languages": 5,
+  "n_parallel_questions": 1420,
+  "n_layers": 32,
+  "n_patch_units": 8,
+  "n_total_heads": 256,
+  "dominant_component_counts": {
+    "lang": 0,
+    "question": 212,
+    "interaction": 44,
+    "none": 0
+  },
+  "mean_fraction_all_heads": {
+    "f_lang": 0.0033387195902426737,
+    "f_question": 0.584676082273536,
+    "f_interaction": 0.4119851981362219
+  },
+  "mean_fraction_nonzero_heads": {
+    "f_lang": 0.0033387195902426737,
+    "f_question": 0.584676082273536,
+    "f_interaction": 0.4119851981362219
+  },
+  "global_fraction_ss_weighted": {
+    "f_lang": 0.003224765708134342,
+    "f_question": 0.5975163009193684,
+    "f_interaction": 0.3992589333724973
+  },
+  "global_f_lang": 0.003224765708134342,
+  "global_f_question": 0.5975163009193684,
+  "global_f_interaction": 0.3992589333724973,
+  "ss_total_sum": 130830.72573764047,
+  "n_nonzero_heads": 256
+}

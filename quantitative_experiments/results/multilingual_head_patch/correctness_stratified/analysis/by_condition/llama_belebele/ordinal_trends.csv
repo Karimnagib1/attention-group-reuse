@@ -1,0 +1,5 @@
+condition_id,model,dataset,metric,outcome,n_questions,k_min,k_max,slope_per_additional_correct_language,ci_low,ci_high,permutation_draws,permutation_exceedances,permutation_p_raw,permutation_p_holm
+llama_belebele,Llama-3.1-8B,Belebele,spearman,aligned,763,0,5,0.05718224694720647,0.052682569349137696,0.06166856047569256,,,nan,
+llama_belebele,Llama-3.1-8B,Belebele,spearman,gap,763,0,5,0.007626884969750296,0.0034843738984436166,0.01156993678632646,10000,2,0.00029997000299970003,0.00029997000299970003
+llama_belebele,Llama-3.1-8B,Belebele,jaccard_at_10,aligned,763,0,5,0.06992274161946162,0.0658063311451938,0.07414220190088817,,,nan,
+llama_belebele,Llama-3.1-8B,Belebele,jaccard_at_10,gap,763,0,5,0.008029758353589433,0.004738115552163162,0.011344739212174928,10000,0,9.999000099990002e-05,0.00019998000199980003

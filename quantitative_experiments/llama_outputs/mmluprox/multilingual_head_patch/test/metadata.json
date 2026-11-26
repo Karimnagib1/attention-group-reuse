@@ -1,0 +1,38 @@
+{
+  "n_samples": 7100,
+  "n_parallel_questions": 1420,
+  "n_eval_samples_before_perturb_aggregation": 28400,
+  "languages": [
+    "en",
+    "ru",
+    "es",
+    "de",
+    "ar"
+  ],
+  "n_layers": 32,
+  "n_heads": 32,
+  "n_kv_heads": 8,
+  "group_size": 4,
+  "patch_mode": "kv_group",
+  "n_patch_units": 8,
+  "d_head": 128,
+  "option_labels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J"
+  ],
+  "target_mode": "correct",
+  "choice_order_perturbations": {
+    "enabled": true,
+    "num_perturbations": 3,
+    "include_original": true,
+    "seed": 42
+  }
+}

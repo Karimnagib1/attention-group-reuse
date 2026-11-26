@@ -1,0 +1,34 @@
+# Paths below are relative to this configuration file.
+base_config: ../../configs/correctness_stratified/belebele_sweep.yaml
+
+model:
+  name_or_path: meta-llama/Llama-3.1-8B
+  dtype: auto
+
+data:
+  allowed_parallel_ids_path: ../../llama_outputs/belebele/all_correct_ids.json
+
+selection:
+  samples_per_language: 100
+  seed: 42
+
+donors:
+  strategies: [language_mean, leave_one_out, disjoint_mean, random_in_language]
+  pool_questions: 100
+  mean_repeats: 3
+  random_repeats: 3
+  seed: 123
+
+patching:
+  batch_size: 8
+  donor_batch_size: 8
+
+run:
+  output_dir: ../runs/llama_belebele
+  device: cuda
+  data_parallel: false
+
+analysis:
+  bootstrap_resamples: 10000
+  bootstrap_seed: 42
+  jaccard_k: 10

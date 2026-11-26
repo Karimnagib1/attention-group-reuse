@@ -1,0 +1,17 @@
+{
+  "analysis": "variance_decomposition_continuous",
+  "input_run_output_dir": "qwen_outputs/mmluprox/multilingual_head_patch/test",
+  "metrics": [
+    "pct_var_mean_incorrect",
+    "pct_var_max_incorrect",
+    "rank_drop_correct"
+  ],
+  "languages": [
+    "en",
+    "ru",
+    "es",
+    "de",
+    "ar"
+  ],
+  "normalization": "rank_percentile"
+}

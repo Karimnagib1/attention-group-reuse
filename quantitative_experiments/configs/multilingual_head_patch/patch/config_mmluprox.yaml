@@ -1,0 +1,57 @@
+model:
+  name_or_path: Qwen/Qwen3-8B
+  # name_or_path: meta-llama/Llama-3.1-8B
+  revision: null
+  trust_remote_code: true
+  dtype: auto
+  attn_implementation: null
+
+data:
+  dataset_name: li-lab/MMLU-ProX
+  subsets: [en, ru, es, de, ar]
+  subset: null
+  split: test
+  question_field: question
+  option_fields: [option_0, option_1, option_2, option_3, option_4, option_5, option_6, option_7, option_8, option_9]
+  answer_field: answer
+  answer_index_field: answer_index
+  id_field: question_id
+  parallel_id_field: question_id
+  allowed_parallel_ids_path: qwen_outputs/mmluprox/all_correct_ids.json
+  language_field: language
+  languages: [en, ru, es, de, ar]
+  max_parallel_questions: null
+  max_samples: null
+  seed: 42
+  cache_dir: null
+
+eval:
+  option_labels: [A, B, C, D, E, F, G, H, I, J]
+  prompt_template: |-
+    Question: {question}
+    Options:
+    {options}
+    {answer_prefix}
+  answer_prefix: "Answer:"
+  answer_sep: " "
+  max_input_length: 2048
+
+patching:
+  patch_mode: kv_group         # head | kv_group
+  target_mode: correct   # generated | correct
+  donor_batch_size: 32
+  batch_size: 32
+  choice_order_perturbations:
+    enabled: true
+    # If null, run max(num_non_empty_choices - 1, 5) perturbations per sample.
+    num_perturbations: 3
+    include_original: true
+    seed: 42
+
+run:
+  output_dir: qwen_outputs/mmluprox/multilingual_head_patch/test
+  device: cuda
+  compute_spearman: true
+  data_parallel: true
+  # device_map: none
+  # multi_gpu: true

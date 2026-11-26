@@ -1,0 +1,5 @@
+condition_id,model,dataset,metric,outcome,n_questions,k_min,k_max,slope_per_additional_correct_language,ci_low,ci_high,permutation_draws,permutation_exceedances,permutation_p_raw,permutation_p_holm
+llama_mmluprox,Llama-3.1-8B,MMLU-ProX,spearman,aligned,1500,0,5,0.035006511983131365,0.03128934265069507,0.038586463332774726,,,nan,
+llama_mmluprox,Llama-3.1-8B,MMLU-ProX,spearman,gap,1500,0,5,0.0018576563517912648,-0.001658272158170593,0.005318417499115327,10000,3141,0.31416858314168583,0.31416858314168583
+llama_mmluprox,Llama-3.1-8B,MMLU-ProX,jaccard_at_10,aligned,1500,0,5,0.04645308460569849,0.04277049859548774,0.05006004801402834,,,nan,
+llama_mmluprox,Llama-3.1-8B,MMLU-ProX,jaccard_at_10,gap,1500,0,5,0.009876964706742453,0.0068342031972776305,0.012834778994480716,10000,0,9.999000099990002e-05,0.00019998000199980003

@@ -1,0 +1,6 @@
+run:
+  output_dir: qwen_outputs/belebele
+  # output_dir: Qwen_outputs/belebele
+  save_predictions: True
+  log_every: 100
+  master_port: 29500

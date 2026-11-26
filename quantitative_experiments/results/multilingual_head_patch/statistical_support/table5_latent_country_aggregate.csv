@@ -1,0 +1,21 @@
+scope,model,setting,family,metric,estimate,ci_low,ci_high,ci_level,bootstrap_resamples,n_conditions,n_shared_pair_indices,aggregation
+model_setting_macro_average,Qwen,monolingual,Qwen | monolingual,baseline_top1_rate,0.008,0.002,0.016,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,monolingual,Qwen | monolingual,patched_top1_rate,0.343,0.291,0.396,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,monolingual,Qwen | monolingual,delta_top1_rate,0.335,0.283,0.389,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,monolingual,Qwen | monolingual,patched_top10_rate,0.767,0.727,0.806,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,monolingual,Qwen | monolingual,patched_median_rank,3.2,2.7,4.2,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,cross-lingual,Qwen | cross-lingual,baseline_top1_rate,0.005,0.00125,0.01,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,cross-lingual,Qwen | cross-lingual,patched_top1_rate,0.35625,0.301875,0.4125,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,cross-lingual,Qwen | cross-lingual,delta_top1_rate,0.35125,0.29625,0.408125,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,cross-lingual,Qwen | cross-lingual,patched_top10_rate,0.78,0.73625,0.821875,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Qwen,cross-lingual,Qwen | cross-lingual,patched_median_rank,2.4375,2.15625,3.34375,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,monolingual,Llama | monolingual,baseline_top1_rate,0.006,0.0,0.016,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,monolingual,Llama | monolingual,patched_top1_rate,0.123,0.089,0.161,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,monolingual,Llama | monolingual,delta_top1_rate,0.117,0.084,0.154,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,monolingual,Llama | monolingual,patched_top10_rate,0.619,0.571,0.6660249999999996,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,monolingual,Llama | monolingual,patched_median_rank,6.75,5.35,8.9,0.95,10000,10,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,cross-lingual,Llama | cross-lingual,baseline_top1_rate,0.00375,0.0,0.01,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,cross-lingual,Llama | cross-lingual,patched_top1_rate,0.129375,0.09623437500000014,0.16625,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,cross-lingual,Llama | cross-lingual,delta_top1_rate,0.125625,0.093125,0.161875,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,cross-lingual,Llama | cross-lingual,patched_top10_rate,0.64625,0.596875,0.694375,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index
+model_setting_macro_average,Llama,cross-lingual,Llama | cross-lingual,patched_median_rank,5.9375,4.71875,7.875,0.95,10000,16,100,macro_average_over_conditions_clustered_by_pair_index

@@ -1,0 +1,21 @@
+{
+  "model": {
+    "name_or_path": "Qwen/Qwen3-8B",
+    "revision": null,
+    "dtype": "bfloat16",
+    "attn_implementation": "eager"
+  },
+  "protocol": {
+    "languages": ["en", "es", "de", "ru", "ar"],
+    "language_pairs": "english_and_monolingual",
+    "donor_sources": ["university", "landmark"],
+    "localization_pairs": 100,
+    "evaluation_pairs": 100,
+    "num_examples": 20,
+    "seed": 20260917,
+    "historical_exclusion": {"num_pairs": 100, "num_examples": 20}
+  },
+  "selection": {"count": 2, "published_sites": [[24, 6], [31, 0]]},
+  "inference": {"device": "auto", "batch_size": 4, "max_input_length": 4096},
+  "evaluation": {"random_draws": 20, "random_seed": 2718, "bootstrap_resamples": 10000, "bootstrap_seed": 31415}
+}

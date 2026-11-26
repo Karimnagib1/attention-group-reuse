@@ -1,0 +1,63 @@
+# io:
+#   # Directory produced by your sweep run (must contain samples.json, metadata.json, importance_tensors.npz)
+#   input_dir: Qwen_outputs/mmluprox/multilingual_head_patch/test
+#   # Where to write baseline_report.json (and optional pairwise_distributions.npz)
+#   output_dir: Qwen_outputs/mmluprox/multilingual_head_patch/test_baselines
+
+# baseline:
+#   # Metrics to evaluate. These correspond to the flattened vectors inside importance_tensors.npz.
+#   metrics:
+#     - pct_var_mean_incorrect
+#     - pct_var_max_incorrect
+#     - rank_drop_correct
+
+#   n_workers: 16
+#   # How to handle degenerate Spearman (zero-variance rank vectors; common for rank_drop_correct)
+#   # options:
+#   #   - skip: exclude those question-pairs from the mean (recommended)
+#   #   - zero: treat as 0 correlation
+#   #   - one_if_equal_else_zero: self-identical -> 1 else 0
+#   degenerate_spearman: skip
+
+#   # Number of shuffles for null distributions
+#   n_shuffles: 500
+#   seed: 123
+
+#   # Also compute a within-language null (diagonal-only baseline): lang(pid) vs lang(shuffled_pid)
+#   within_language_baseline: true
+
+#   # If true, saves the full [n_shuffles, L, L] distributions into an NPZ for plotting
+#   save_distributions_npz: true
+
+io:
+  # Must contain samples.json, metadata.json, importance_tensors.npz
+  input_dir: qwen_outputs/belebele/multilingual_head_patch/test
+  # Outputs written here
+  output_dir: qwen_outputs/belebele/multilingual_head_patch/test_baselines
+
+baseline:
+  n_workers: 16
+  metrics:
+    - pct_var_mean_incorrect
+    - pct_var_max_incorrect
+    - rank_drop_correct
+
+  # Spearman degeneracy handling (rank_drop often has many ties / zero-variance vectors)
+  # options: skip | zero | one_if_equal_else_zero
+  degenerate_spearman: skip
+
+  # Shuffle test settings
+  n_shuffles: 500
+  seed: 123
+
+  # Also compute within-language shuffled baseline (diagonal control)
+  within_language_baseline: false
+
+  # Save full null distributions (big files) for plotting
+  save_distributions_npz: true
+
+  # ---- Jaccard@k baseline ----
+  compute_jaccard: true
+  # Choose k relative to D = n_layers * n_patch_units (flattened length)
+  # Example: for Llama-8B with 32 layers and 8 kv-groups => D=256; heads => D=1024
+  jaccard_topk: [5, 10, 20, 50, 100]

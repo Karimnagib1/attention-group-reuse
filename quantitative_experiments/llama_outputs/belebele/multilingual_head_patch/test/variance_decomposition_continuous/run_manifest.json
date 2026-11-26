@@ -1,0 +1,17 @@
+{
+  "analysis": "variance_decomposition_continuous",
+  "input_run_output_dir": "llama_outputs/belebele/multilingual_head_patch/test",
+  "metrics": [
+    "pct_var_mean_incorrect",
+    "pct_var_max_incorrect",
+    "rank_drop_correct"
+  ],
+  "languages": [
+    "acm_Arab",
+    "eng_Latn",
+    "deu_Latn",
+    "rus_Cyrl",
+    "spa_Latn"
+  ],
+  "normalization": "rank_percentile"
+}

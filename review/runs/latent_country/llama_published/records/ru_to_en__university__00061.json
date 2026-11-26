@@ -1,0 +1,125 @@
+{
+  "id": "ru_to_en__university__00061",
+  "condition": "ru_to_en__university",
+  "pair_index": 61,
+  "donor_language": "ru",
+  "recipient_language": "en",
+  "donor_source": "university",
+  "run_fingerprint": "5efb1cf3a0aa0a0148a993c0cb3ef20f6cb884876fedebed438360fa9abba694",
+  "prompt_sha256": "6d74f4465c9bbc4e86b321f94abbd130dfd352039ee5887c3bfe17764a59cc8d",
+  "baseline": {
+    "original_rank": 3,
+    "target_rank": 584,
+    "original_minus_target_logit": 9.625
+  },
+  "original_token_id": 63039,
+  "target_token_id": 71344,
+  "answer_token_collision": false,
+  "selected": {
+    "original_rank": 3,
+    "target_rank": 93,
+    "original_minus_target_logit": 5.9375
+  },
+  "random": [
+    {
+      "original_rank": 3,
+      "target_rank": 104,
+      "original_minus_target_logit": 6.1875
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 694,
+      "original_minus_target_logit": 9.875
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 382,
+      "original_minus_target_logit": 8.5625
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 410,
+      "original_minus_target_logit": 8.5625
+    },
+    {
+      "original_rank": 2,
+      "target_rank": 480,
+      "original_minus_target_logit": 9.125
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 603,
+      "original_minus_target_logit": 9.5
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 680,
+      "original_minus_target_logit": 9.875
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 675,
+      "original_minus_target_logit": 9.8125
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 400,
+      "original_minus_target_logit": 8.625
+    },
+    {
+      "original_rank": 2,
+      "target_rank": 500,
+      "original_minus_target_logit": 9.375
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 629,
+      "original_minus_target_logit": 9.75
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 672,
+      "original_minus_target_logit": 9.75
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 641,
+      "original_minus_target_logit": 9.5
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 587,
+      "original_minus_target_logit": 9.5
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 522,
+      "original_minus_target_logit": 9.25
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 512,
+      "original_minus_target_logit": 9.3125
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 507,
+      "original_minus_target_logit": 9.3125
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 602,
+      "original_minus_target_logit": 9.5625
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 663,
+      "original_minus_target_logit": 9.75
+    },
+    {
+      "original_rank": 3,
+      "target_rank": 679,
+      "original_minus_target_logit": 9.6875
+    }
+  ]
+}

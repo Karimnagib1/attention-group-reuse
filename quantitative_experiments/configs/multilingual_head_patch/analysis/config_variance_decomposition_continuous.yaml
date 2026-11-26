@@ -1,0 +1,19 @@
+input:
+  run_output_dir: llama_outputs/mmluprox/multilingual_head_patch/test
+  metrics: [pct_var_mean_incorrect, pct_var_max_incorrect, rank_drop_correct]
+  languages: null
+  require_balanced: true
+  drop_incomplete_questions: true
+
+processing:
+  normalization: rank_percentile   # rank_percentile | zscore | none
+  epsilon: 1.0e-8
+
+bootstrap:
+  enabled: false
+  n_resamples: 200
+  seed: 42
+
+output:
+  output_dir: llama_outputs/mmluprox/multilingual_head_patch/test/variance_decomposition_continuous
+  save_top_examples_per_component: 3

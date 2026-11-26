@@ -1,0 +1,5 @@
+model,setting,original_top1_before,heldout_top1_before,original_top1_after,heldout_top1_after,original_delta_top1,original_delta_ci_low,original_delta_ci_high,heldout_delta_top1,heldout_delta_ci_low,heldout_delta_ci_high,original_top10_after,heldout_top10_after,original_median_rank_after,heldout_median_rank_after
+Qwen3-8B,monolingual,0.8,2.0,34.3,29.8,33.5,28.3,38.9,27.8,22.9,32.9,76.7,73.2,3.2,3.85
+Qwen3-8B,cross_lingual,0.5,1.25,35.625,31.0,35.125,29.625,40.8125,29.75,24.875,34.6875,78.0,73.6875,2.4375,3.6875
+Llama-3.1-8B,monolingual,0.6,1.7,12.3,14.5,11.7,8.4,15.4,12.8,9.8,16.0,61.9,57.4,6.75,7.95
+Llama-3.1-8B,cross_lingual,0.375,1.0625,12.9375,15.125,12.5625,9.3125,16.1875,14.0625,10.9375,17.375,64.625,60.9375,5.9375,7.3438

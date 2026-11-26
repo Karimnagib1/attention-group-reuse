@@ -1,0 +1,73 @@
+{
+  "lang": [],
+  "question": [
+    {
+      "flat_head_idx": 261,
+      "layer": 32,
+      "patch_unit": 5,
+      "f_lang": 0.00040304192930615967,
+      "f_question": 0.6494987671232926,
+      "f_interaction": 0.3500981909473948,
+      "dominant_fraction": 0.6494987671232926,
+      "dominance_margin": 0.29940057617589777,
+      "component_entropy": 0.5924628790335572
+    },
+    {
+      "flat_head_idx": 176,
+      "layer": 22,
+      "patch_unit": 0,
+      "f_lang": 0.0016287690421102506,
+      "f_question": 0.6488033746198384,
+      "f_interaction": 0.34956785633803833,
+      "dominant_fraction": 0.6488033746198384,
+      "dominance_margin": 0.29923551828180006,
+      "component_entropy": 0.5994484774294387
+    },
+    {
+      "flat_head_idx": 177,
+      "layer": 22,
+      "patch_unit": 1,
+      "f_lang": 0.0023102585457621594,
+      "f_question": 0.6397867433954979,
+      "f_interaction": 0.35790299805876097,
+      "dominant_fraction": 0.6397867433954979,
+      "dominance_margin": 0.28188374533673694,
+      "component_entropy": 0.6075927884737462
+    }
+  ],
+  "interaction": [
+    {
+      "flat_head_idx": 32,
+      "layer": 4,
+      "patch_unit": 0,
+      "f_lang": 0.0023508302279192732,
+      "f_question": 0.2591560504349368,
+      "f_interaction": 0.7384931193371609,
+      "dominant_fraction": 0.7384931193371609,
+      "dominance_margin": 0.4793370689022241,
+      "component_entropy": 0.5352605277000823
+    },
+    {
+      "flat_head_idx": 8,
+      "layer": 1,
+      "patch_unit": 0,
+      "f_lang": 0.006748221302866209,
+      "f_question": 0.26998591108506986,
+      "f_interaction": 0.7232658676120622,
+      "dominant_fraction": 0.7232658676120622,
+      "dominance_margin": 0.4532799565269924,
+      "component_entropy": 0.5657764657786883
+    },
+    {
+      "flat_head_idx": 16,
+      "layer": 2,
+      "patch_unit": 0,
+      "f_lang": 0.02371620458396923,
+      "f_question": 0.257672131158347,
+      "f_interaction": 0.7186116642576902,
+      "dominant_fraction": 0.7186116642576902,
+      "dominance_margin": 0.4609395330993432,
+      "component_entropy": 0.6149677053918623
+    }
+  ]
+}

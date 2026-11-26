@@ -1,0 +1,48 @@
+paths:
+  # All paths are resolved relative to this YAML file.
+  workspace_root: ../../..
+  quantitative_root: ../..
+  latent_manifest_csv: ../../../paper_summary_final/experiment_summary.csv
+  output_dir: ../../results/multilingual_head_patch/statistical_support
+
+analysis:
+  ci_level: 0.95
+  bootstrap_resamples: 10000
+  permutation_draws: 10000
+  bootstrap_seed: 42
+  permutation_seed: 123
+  matrix_block_size: 256
+  variance_block_size: 256
+  bootstrap_block_size: 512
+
+paper_scope:
+  # These are the only importance statistics reported in the attached paper.
+  importance_metric: pct_var_mean_incorrect
+  jaccard_k: 10
+  conditions:
+    - model: Llama-3.1-8B
+      dataset: Belebele
+      input_dir: llama_outputs/belebele/multilingual_head_patch/test
+    - model: Llama-3.1-8B
+      dataset: MMLU-ProX
+      input_dir: llama_outputs/mmluprox/multilingual_head_patch/test
+    - model: Qwen3-8B
+      dataset: Belebele
+      input_dir: qwen_outputs/belebele/multilingual_head_patch/test
+    - model: Qwen3-8B
+      dataset: MMLU-ProX
+      input_dir: qwen_outputs/mmluprox/multilingual_head_patch/test
+
+latent_country:
+  # The script reads paths from the paper summary manifest; it does not glob other result folders.
+  expected_total_conditions: 52
+  allowed_folders:
+    - Qwen_individual_language_rank_diff
+    - Qwen_cross_lingual_rank_diff
+    - Llama_individual_language_rank_diff
+    - Llama_cross_lingual_rank_diff
+  expected_conditions_by_family:
+    "Qwen | monolingual": 10
+    "Qwen | cross-lingual": 16
+    "Llama | monolingual": 10
+    "Llama | cross-lingual": 16

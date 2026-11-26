@@ -1,0 +1,62 @@
+model:
+  name_or_path: mistralai/Ministral-3-14B-Instruct-2512-BF16
+  cache_dir: null
+  revision: null
+  dtype: bfloat16
+  attn_implementation: sdpa
+
+data:
+  dataset_name: li-lab/MMLU-ProX
+  cache_dir: null
+  subsets: [en, ru, es, de, ar]
+  split: test
+  question_field: question
+  option_fields: [option_0, option_1, option_2, option_3, option_4, option_5, option_6, option_7, option_8, option_9]
+  answer_index_field: answer_index
+  answer_field: answer
+  id_field: question_id
+  parallel_id_field: question_id
+  language_field: language
+  languages: [en, ru, es, de, ar]
+  seed: 42
+
+eval:
+  method: generate
+  prompt_format: raw
+  batch_size: 4
+  generate_batch_size: 4
+  generate_max_new_tokens: 2
+  generate_temperature: 0.0
+  generate_do_sample: false
+  max_input_length: 2048
+  option_labels: [A, B, C, D, E, F, G, H, I, J]
+  prompt_template: |-
+    Question: {question}
+    Options:
+    {options}
+    {answer_prefix}
+  answer_prefix: "Answer:"
+  answer_sep: " "
+
+patching:
+  patch_mode: kv_group
+  target_mode: correct
+  donor_batch_size: 4
+  batch_size: 4
+  choice_order_perturbations:
+    enabled: true
+    num_perturbations: 3
+    include_original: true
+    seed: 42
+
+run:
+  device_map: auto
+  # Set true for one complete model per GPU during evaluation or patching.
+  # Replication overrides device_map; sharding remains the default.
+  data_parallel: false
+  save_predictions: true
+  log_every: 100
+  compute_spearman: true
+  checkpoint:
+    enabled: true
+    resume: true

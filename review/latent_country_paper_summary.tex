@@ -1,0 +1,28 @@
+% Paste into the paper; table* is intended for a two-column layout.
+\paragraph{Held-out latent-country evaluation.}
+We evaluated the previously identified attention groups on fresh donor--recipient prompt pairs, holding the group sets fixed across all language conditions. Evaluation comprised 100 pairs per condition for two donor families and 13 directed language pairs (2,600 evaluations per model), with 20 demonstrations per prompt. Relative to 20 random group-set draws matched for group count within each selected layer, patching the published groups increased the rank-1 rate of the first token of the donor-country capital in the recipient language. Across cross-language conditions, Qwen3-8B achieved 31.00\% versus 7.68\% under random patching, a gain of 23.33 percentage points (95\% CI [19.53, 27.10]); Llama-3.1-8B achieved 15.13\% versus 0.95\%, a gain of 14.18 points [11.09, 17.47]. Within-language rates were 29.80\% and 14.50\%, respectively, compared with random-control rates of 8.36\% and 1.56\%. The gain over random controls was positive in every evaluated condition for both models. These results support generalization of the published groups' steering effects to new prompt combinations across languages. The evaluation holds out complete prompts while allowing countries and entities to recur, and measures first-token steering rather than full-answer generation.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+% Requires \usepackage{graphicx}; one table with grouped before/after columns.
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llrrrrrrrrrl@{}}
+\hline
+Model & Evaluation & \multicolumn{2}{c}{Mean rank $\downarrow$} & \multicolumn{2}{c}{Median rank$^{\dagger}$ $\downarrow$} & \multicolumn{2}{c}{Top-1 (\%)} & \multicolumn{2}{c}{Top-10 (\%)} & Random & Gain over random (pp) \\
+ & & Before & After & Before & After & Before & After & Before & After & Top-1 (\%) & [95\% CI] \\
+\hline
+Qwen3-8B & All conditions & 750.07 & 31.52 & 161.87 & 3.75 & 1.54 & 30.54 & 10.81 & 73.50 & 7.94 & +22.60 [18.94, 26.21] \\
+Qwen3-8B & Within language & 725.12 & 26.92 & 140.90 & 3.85 & 2.00 & 29.80 & 13.60 & 73.20 & 8.36 & +21.45 [17.74, 25.31] \\
+Qwen3-8B & Cross language & 765.67 & 34.40 & 174.97 & 3.69 & 1.25 & 31.00 & 9.06 & 73.69 & 7.68 & +23.33 [19.53, 27.10] \\
+\hline
+Llama-3.1-8B & All conditions & 298.25 & 37.96 & 155.65 & 7.58 & 1.31 & 14.88 & 9.65 & 59.58 & 1.18 & +13.70 [10.72, 16.82] \\
+Llama-3.1-8B & Within language & 277.27 & 38.01 & 133.65 & 7.95 & 1.70 & 14.50 & 12.10 & 57.40 & 1.56 & +12.95 [9.96, 16.16] \\
+Llama-3.1-8B & Cross language & 311.36 & 37.93 & 169.41 & 7.34 & 1.06 & 15.13 & 8.13 & 60.94 & 0.95 & +14.18 [11.09, 17.47] \\
+\hline
+\end{tabular}%
+}
+\caption{Held-out latent-country steering with fixed published attention groups. All outcomes concern the first token of the donor-country capital, expressed in the recipient language. Top-1 and top-10 rates are the percentages with vocabulary rank 1 and at most 10, respectively. Before and after refer to unpatched and published-group-patched recipient passes; lower rank is better. $^{\dagger}$Aggregate median rank is the mean of within-condition medians, not the pooled median. Gains are relative to random controls, in percentage points. Random controls average 20 draws matched for group count within each selected layer. The 95\% percentile confidence intervals for top-1 gains use 10,000 resamples of the 100 shared prompt-pair indices, jointly across conditions, conditional on the frozen selected and random group sets. Countries and entities may recur across the prompt split. Cases whose original and target answers share their first token are retained: 22/2,600 for Qwen and 44/2,600 for Llama.}
+\label{tab:latent-country-heldout}
+\end{table*}

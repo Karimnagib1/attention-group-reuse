@@ -1,0 +1,94 @@
+{
+  "model": {
+    "name_or_path": "mistralai/Ministral-3-14B-Base-2512",
+    "cache_dir": "/l/users/kareem.elzeky/.cache",
+    "revision": null,
+    "dtype": "bfloat16",
+    "attn_implementation": "sdpa"
+  },
+  "data": {
+    "dataset_name": "facebook/belebele",
+    "cache_dir": "/l/users/kareem.elzeky/.cache",
+    "subsets": [
+      "eng_Latn",
+      "spa_Latn",
+      "deu_Latn",
+      "rus_Cyrl",
+      "acm_Arab"
+    ],
+    "split": "test",
+    "question_field": "question",
+    "option_fields": [
+      "mc_answer1",
+      "mc_answer2",
+      "mc_answer3",
+      "mc_answer4"
+    ],
+    "answer_index_field": "correct_answer_num",
+    "answer_field": null,
+    "id_field": "question_id",
+    "parallel_id_field": "question_id",
+    "language_field": "dialect",
+    "languages": [
+      "eng_Latn",
+      "spa_Latn",
+      "deu_Latn",
+      "rus_Cyrl",
+      "acm_Arab"
+    ],
+    "seed": 42,
+    "context_field": "flores_passage",
+    "answer_index_offset": -1,
+    "id_fields": [
+      "link",
+      "question_number"
+    ],
+    "id_separator": "::",
+    "drop_columns": [
+      "ds"
+    ]
+  },
+  "eval": {
+    "method": "generate",
+    "prompt_format": "raw",
+    "batch_size": 4,
+    "generate_batch_size": 32,
+    "generate_max_new_tokens": 2,
+    "generate_temperature": 0.0,
+    "generate_do_sample": false,
+    "max_input_length": 2048,
+    "option_labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "prompt_template": "Passage: {passage}\nQuestion: {question}\nOptions:\n{options}\n{answer_prefix}",
+    "answer_prefix": "Answer:",
+    "answer_sep": " "
+  },
+  "patching": {
+    "patch_mode": "kv_group",
+    "target_mode": "correct",
+    "donor_batch_size": 4,
+    "batch_size": 4,
+    "choice_order_perturbations": {
+      "enabled": true,
+      "num_perturbations": 3,
+      "include_original": true,
+      "seed": 42
+    }
+  },
+  "run": {
+    "device_map": "auto",
+    "data_parallel": false,
+    "save_predictions": true,
+    "log_every": 100,
+    "compute_spearman": true,
+    "checkpoint": {
+      "enabled": true,
+      "resume": true
+    },
+    "output_dir": "ministral_outputs/Ministral-3-14B-Base-2512/belebele"
+  }
+}

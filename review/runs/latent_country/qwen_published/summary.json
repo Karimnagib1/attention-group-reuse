@@ -1,0 +1,1839 @@
+{
+  "method": "95% percentile bootstrap; resample pair_index jointly across conditions; equal condition weights",
+  "conditioning": "Fixed model, countries, selected groups, and random-site bank; no held-out-country claim.",
+  "outcome": "Vocabulary rank of the first token of the recipient-language, donor-country capital.",
+  "ties": "Rank is one plus the number of strictly higher logits, matching the original evaluator.",
+  "collisions": "Pairs with identical original/target first-token IDs are retained and counted explicitly.",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 31415,
+  "groups": {
+    "ar_to_ar__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 3.0,
+          "ci95": [
+            0.0,
+            7.000000000000001
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 16.0,
+          "ci95": [
+            9.0,
+            24.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 13.0,
+          "ci95": [
+            6.0,
+            21.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 52.0,
+          "ci95": [
+            42.0,
+            62.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 25.02,
+          "ci95": [
+            17.789749999999998,
+            33.16024999999999
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 10.0,
+          "ci95": [
+            6.0,
+            13.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 6.05,
+          "ci95": [
+            3.35,
+            9.20124999999998
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 9.95,
+          "ci95": [
+            4.8999999999999995,
+            15.549999999999999
+          ]
+        }
+      }
+    },
+    "ar_to_ar__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 2,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 4.0,
+          "ci95": [
+            1.0,
+            8.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 23.0,
+          "ci95": [
+            15.0,
+            31.024999999999636
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 19.0,
+          "ci95": [
+            11.0,
+            28.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 68.0,
+          "ci95": [
+            57.99999999999999,
+            77.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 14.63,
+          "ci95": [
+            10.28,
+            20.11
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 5.0,
+          "ci95": [
+            3.0,
+            8.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 9.2,
+          "ci95": [
+            5.5,
+            13.5
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 13.8,
+          "ci95": [
+            7.45,
+            20.651249999999987
+          ]
+        }
+      }
+    },
+    "ar_to_en__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 11.0,
+          "ci95": [
+            5.0,
+            18.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 11.0,
+          "ci95": [
+            5.0,
+            18.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 42.0,
+          "ci95": [
+            32.0,
+            52.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 104.8,
+          "ci95": [
+            44.07,
+            188.29
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 15.5,
+          "ci95": [
+            10.0,
+            26.5
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 2.15,
+          "ci95": [
+            0.8999999999999999,
+            3.5999999999999996
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 8.85,
+          "ci95": [
+            4.15,
+            14.10124999999998
+          ]
+        }
+      }
+    },
+    "ar_to_en__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 24.0,
+          "ci95": [
+            16.0,
+            33.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 24.0,
+          "ci95": [
+            16.0,
+            33.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 62.0,
+          "ci95": [
+            53.0,
+            71.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 49.73,
+          "ci95": [
+            23.20975,
+            88.22149999999998
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 4.0,
+          "ci95": [
+            3.0,
+            8.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 4.8,
+          "ci95": [
+            3.05,
+            6.7
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 19.2,
+          "ci95": [
+            12.547500000000003,
+            26.4
+          ]
+        }
+      }
+    },
+    "de_to_de__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 32.0,
+          "ci95": [
+            23.0,
+            41.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 32.0,
+          "ci95": [
+            23.0,
+            41.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 78.0,
+          "ci95": [
+            70.0,
+            86.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 28.8,
+          "ci95": [
+            11.8595,
+            51.38199999999998
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.0,
+          "ci95": [
+            2.0,
+            5.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.3999999999999995,
+          "ci95": [
+            5.25,
+            9.6
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 24.6,
+          "ci95": [
+            17.64875,
+            31.701249999999984
+          ]
+        }
+      }
+    },
+    "de_to_de__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 28.999999999999996,
+          "ci95": [
+            20.0,
+            38.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 28.999999999999996,
+          "ci95": [
+            20.0,
+            38.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 78.0,
+          "ci95": [
+            69.0,
+            86.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 37.19,
+          "ci95": [
+            14.9,
+            67.21174999999997
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.0,
+          "ci95": [
+            2.0,
+            5.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 6.45,
+          "ci95": [
+            4.35,
+            8.55
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 22.549999999999997,
+          "ci95": [
+            15.600000000000001,
+            29.9
+          ]
+        }
+      }
+    },
+    "de_to_en__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 35.0,
+          "ci95": [
+            26.0,
+            45.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 35.0,
+          "ci95": [
+            26.0,
+            45.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 85.0,
+          "ci95": [
+            78.0,
+            92.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 22.16,
+          "ci95": [
+            7.02,
+            46.12174999999997
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.0,
+          "ci95": [
+            2.0,
+            3.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 8.35,
+          "ci95": [
+            6.1,
+            10.65
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 26.65,
+          "ci95": [
+            19.3,
+            34.15
+          ]
+        }
+      }
+    },
+    "de_to_en__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            43.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            43.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 84.0,
+          "ci95": [
+            76.0,
+            91.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 21.48,
+          "ci95": [
+            7.5,
+            40.76024999999999
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.0,
+          "ci95": [
+            2.0,
+            3.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.1,
+          "ci95": [
+            4.95,
+            9.3
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 26.9,
+          "ci95": [
+            19.39875,
+            34.6
+          ]
+        }
+      }
+    },
+    "en_to_ar__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 3.0,
+          "ci95": [
+            0.0,
+            7.000000000000001
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            43.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 31.0,
+          "ci95": [
+            21.999999999999996,
+            41.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 71.0,
+          "ci95": [
+            62.0,
+            80.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 8.18,
+          "ci95": [
+            6.04,
+            10.54
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.0,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 9.1,
+          "ci95": [
+            6.35,
+            12.1
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 24.9,
+          "ci95": [
+            17.549999999999997,
+            32.3
+          ]
+        }
+      }
+    },
+    "en_to_ar__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 2,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 4.0,
+          "ci95": [
+            1.0,
+            8.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 31.0,
+          "ci95": [
+            22.0,
+            40.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 27.0,
+          "ci95": [
+            18.0,
+            37.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 74.0,
+          "ci95": [
+            65.0,
+            82.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 22.64,
+          "ci95": [
+            8.839500000000001,
+            43.08024999999999
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.5,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 10.65,
+          "ci95": [
+            7.000000000000001,
+            14.799999999999999
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 20.35,
+          "ci95": [
+            12.750000000000002,
+            28.201249999999984
+          ]
+        }
+      }
+    },
+    "en_to_de__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 36.0,
+          "ci95": [
+            27.0,
+            46.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 36.0,
+          "ci95": [
+            27.0,
+            46.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 74.0,
+          "ci95": [
+            65.0,
+            82.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 23.51,
+          "ci95": [
+            9.719750000000001,
+            45.34025
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.5,
+          "ci95": [
+            2.0,
+            3.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.8,
+          "ci95": [
+            5.65,
+            10.0
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 28.2,
+          "ci95": [
+            20.65,
+            36.1
+          ]
+        }
+      }
+    },
+    "en_to_de__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 26.0,
+          "ci95": [
+            18.0,
+            35.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 26.0,
+          "ci95": [
+            18.0,
+            35.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 73.0,
+          "ci95": [
+            64.0,
+            81.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 52.83,
+          "ci95": [
+            18.0,
+            103.74024999999999
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 4.0,
+          "ci95": [
+            3.0,
+            5.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 5.5,
+          "ci95": [
+            3.5999999999999996,
+            7.3999999999999995
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 20.5,
+          "ci95": [
+            13.55,
+            27.9
+          ]
+        }
+      }
+    },
+    "en_to_en__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 41.0,
+          "ci95": [
+            32.0,
+            51.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 41.0,
+          "ci95": [
+            32.0,
+            51.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 86.0,
+          "ci95": [
+            79.0,
+            93.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 8.79,
+          "ci95": [
+            4.48,
+            15.490499999999994
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.0,
+          "ci95": [
+            1.0,
+            3.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 9.25,
+          "ci95": [
+            7.049999999999999,
+            11.55
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 31.75,
+          "ci95": [
+            24.35,
+            39.601249999999986
+          ]
+        }
+      }
+    },
+    "en_to_en__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            44.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            44.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 82.0,
+          "ci95": [
+            74.0,
+            89.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 21.91,
+          "ci95": [
+            8.7,
+            39.3505
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.5,
+          "ci95": [
+            2.0,
+            3.5
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 6.9,
+          "ci95": [
+            4.8500000000000005,
+            9.1
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 27.1,
+          "ci95": [
+            19.75,
+            34.80124999999998
+          ]
+        }
+      }
+    },
+    "en_to_es__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 36.0,
+          "ci95": [
+            27.0,
+            46.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 36.0,
+          "ci95": [
+            27.0,
+            46.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 80.0,
+          "ci95": [
+            72.0,
+            87.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 10.92,
+          "ci95": [
+            5.85,
+            18.26025
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.0,
+          "ci95": [
+            2.0,
+            3.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 8.6,
+          "ci95": [
+            6.4,
+            10.9
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 27.4,
+          "ci95": [
+            19.85,
+            35.2
+          ]
+        }
+      }
+    },
+    "en_to_es__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 31.0,
+          "ci95": [
+            22.0,
+            40.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 31.0,
+          "ci95": [
+            22.0,
+            40.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 72.0,
+          "ci95": [
+            63.0,
+            81.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 52.95,
+          "ci95": [
+            10.879500000000002,
+            123.30024999999999
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.5,
+          "ci95": [
+            2.0,
+            5.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.35,
+          "ci95": [
+            5.25,
+            9.5
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 23.65,
+          "ci95": [
+            16.65,
+            30.85
+          ]
+        }
+      }
+    },
+    "en_to_ru__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 5,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 5.0,
+          "ci95": [
+            1.0,
+            10.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            43.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 29.0,
+          "ci95": [
+            20.0,
+            38.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 86.0,
+          "ci95": [
+            79.0,
+            92.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 7.42,
+          "ci95": [
+            4.97,
+            10.58
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.5,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 11.95,
+          "ci95": [
+            8.05,
+            16.3
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 22.05,
+          "ci95": [
+            14.799999999999999,
+            29.25
+          ]
+        }
+      }
+    },
+    "en_to_ru__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 4,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 8.0,
+          "ci95": [
+            3.0,
+            14.000000000000002
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 38.0,
+          "ci95": [
+            28.999999999999996,
+            48.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 30.0,
+          "ci95": [
+            21.0,
+            39.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 82.0,
+          "ci95": [
+            74.0,
+            89.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 9.29,
+          "ci95": [
+            6.07,
+            13.08
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.0,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 13.950000000000001,
+          "ci95": [
+            9.15,
+            19.3
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 24.049999999999997,
+          "ci95": [
+            16.749999999999996,
+            31.6
+          ]
+        }
+      }
+    },
+    "es_to_en__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 39.0,
+          "ci95": [
+            28.999999999999996,
+            49.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 39.0,
+          "ci95": [
+            28.999999999999996,
+            49.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 85.0,
+          "ci95": [
+            78.0,
+            92.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 18.58,
+          "ci95": [
+            7.65,
+            32.66049999999999
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.5,
+          "ci95": [
+            2.0,
+            4.5
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.35,
+          "ci95": [
+            5.25,
+            9.501249999999981
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 31.65,
+          "ci95": [
+            23.7,
+            39.85
+          ]
+        }
+      }
+    },
+    "es_to_en__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 35.0,
+          "ci95": [
+            26.0,
+            44.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 35.0,
+          "ci95": [
+            26.0,
+            44.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 78.0,
+          "ci95": [
+            69.97500000000002,
+            86.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 47.88,
+          "ci95": [
+            16.5895,
+            94.60224999999996
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.0,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.75,
+          "ci95": [
+            5.6000000000000005,
+            10.05
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 27.25,
+          "ci95": [
+            20.1,
+            34.75
+          ]
+        }
+      }
+    },
+    "es_to_es__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            44.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            44.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 72.0,
+          "ci95": [
+            63.0,
+            80.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 26.62,
+          "ci95": [
+            9.389750000000001,
+            56.452499999999965
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.0,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.1,
+          "ci95": [
+            5.048750000000002,
+            9.3
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 26.9,
+          "ci95": [
+            19.5,
+            34.65
+          ]
+        }
+      }
+    },
+    "es_to_es__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            43.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 34.0,
+          "ci95": [
+            25.0,
+            43.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 70.0,
+          "ci95": [
+            61.0,
+            79.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 82.28,
+          "ci95": [
+            23.367750000000004,
+            171.81249999999997
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 2.0,
+          "ci95": [
+            2.0,
+            5.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 8.1,
+          "ci95": [
+            5.8500000000000005,
+            10.4
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 25.9,
+          "ci95": [
+            18.95,
+            33.05
+          ]
+        }
+      }
+    },
+    "ru_to_en__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 21.0,
+          "ci95": [
+            13.0,
+            28.999999999999996
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 21.0,
+          "ci95": [
+            13.0,
+            28.999999999999996
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 60.0,
+          "ci95": [
+            50.0,
+            70.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 50.53,
+          "ci95": [
+            24.04,
+            86.06
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 6.0,
+          "ci95": [
+            4.0,
+            8.5
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 4.25,
+          "ci95": [
+            2.55,
+            6.1
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 16.75,
+          "ci95": [
+            10.55,
+            23.5
+          ]
+        }
+      }
+    },
+    "ru_to_en__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 0,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 31.0,
+          "ci95": [
+            22.0,
+            40.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 31.0,
+          "ci95": [
+            22.0,
+            40.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 71.0,
+          "ci95": [
+            62.0,
+            80.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 47.49,
+          "ci95": [
+            17.84975,
+            91.74249999999996
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.0,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 6.15,
+          "ci95": [
+            4.2,
+            8.25
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 24.85,
+          "ci95": [
+            17.65,
+            32.4
+          ]
+        }
+      }
+    },
+    "ru_to_ru__landmark": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 5,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 5.0,
+          "ci95": [
+            1.0,
+            10.0
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 24.0,
+          "ci95": [
+            16.0,
+            33.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 19.0,
+          "ci95": [
+            11.0,
+            28.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 73.0,
+          "ci95": [
+            64.0,
+            81.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 11.84,
+          "ci95": [
+            8.25975,
+            16.12025
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 5.0,
+          "ci95": [
+            4.0,
+            7.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 9.6,
+          "ci95": [
+            5.7,
+            14.149999999999999
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 14.4,
+          "ci95": [
+            7.85,
+            21.45
+          ]
+        }
+      }
+    },
+    "ru_to_ru__university": {
+      "n_conditions": 1,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 4,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 8.0,
+          "ci95": [
+            3.0,
+            14.000000000000002
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 31.0,
+          "ci95": [
+            22.0,
+            40.0
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 23.0,
+          "ci95": [
+            14.0,
+            32.0
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 73.0,
+          "ci95": [
+            64.0,
+            81.0
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 12.16,
+          "ci95": [
+            8.17,
+            16.92
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.0,
+          "ci95": [
+            2.0,
+            4.0
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 13.5,
+          "ci95": [
+            8.7,
+            19.0
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 17.5,
+          "ci95": [
+            10.75,
+            24.6
+          ]
+        }
+      }
+    },
+    "all": {
+      "n_conditions": 26,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 22,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 1.5384615384615385,
+          "ci95": [
+            0.8461538461538461,
+            2.3846153846153846
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 30.538461538461537,
+          "ci95": [
+            25.80769230769231,
+            35.19230769230769
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 28.999999999999996,
+          "ci95": [
+            24.22980769230769,
+            33.73173076923076
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 73.5,
+          "ci95": [
+            69.61538461538461,
+            77.15384615384615
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 31.52423076923077,
+          "ci95": [
+            20.165375,
+            46.114817307692306
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.75,
+          "ci95": [
+            3.173076923076923,
+            4.8076923076923075
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.936538461538461,
+          "ci95": [
+            6.688413461538461,
+            9.225048076923075
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 22.601923076923075,
+          "ci95": [
+            18.94033653846154,
+            26.20966346153846
+          ]
+        }
+      }
+    },
+    "monolingual": {
+      "n_conditions": 10,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 11,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 2.0,
+          "ci95": [
+            1.0999999999999999,
+            3.1
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 29.799999999999997,
+          "ci95": [
+            25.0,
+            34.8
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 27.799999999999997,
+          "ci95": [
+            22.900000000000002,
+            32.9
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 73.2,
+          "ci95": [
+            69.1,
+            77.2
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 26.924,
+          "ci95": [
+            17.112849999999998,
+            39.915074999999995
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.85,
+          "ci95": [
+            3.1,
+            4.85
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 8.355,
+          "ci95": [
+            6.97,
+            9.81
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 21.444999999999997,
+          "ci95": [
+            17.739875,
+            25.309999999999995
+          ]
+        }
+      }
+    },
+    "cross_lingual": {
+      "n_conditions": 16,
+      "n_pairs_per_condition": 100,
+      "answer_token_collision_count": 11,
+      "metrics": {
+        "baseline_top1_percent": {
+          "estimate": 1.25,
+          "ci95": [
+            0.6875,
+            1.9375
+          ]
+        },
+        "selected_top1_percent": {
+          "estimate": 31.0,
+          "ci95": [
+            26.187500000000004,
+            35.875
+          ]
+        },
+        "selected_minus_baseline_top1_pp": {
+          "estimate": 29.75,
+          "ci95": [
+            24.875,
+            34.6875
+          ]
+        },
+        "selected_top10_percent": {
+          "estimate": 73.6875,
+          "ci95": [
+            69.75,
+            77.4375
+          ]
+        },
+        "selected_mean_rank": {
+          "estimate": 34.399375,
+          "ci95": [
+            21.282453125,
+            50.26162499999999
+          ]
+        },
+        "selected_median_rank": {
+          "estimate": 3.6875,
+          "ci95": [
+            3.09375,
+            4.875
+          ]
+        },
+        "random_top1_percent": {
+          "estimate": 7.675,
+          "ci95": [
+            6.446796875,
+            8.934375
+          ]
+        },
+        "selected_minus_random_top1_pp": {
+          "estimate": 23.325,
+          "ci95": [
+            19.534375000000004,
+            27.100234375
+          ]
+        }
+      }
+    }
+  },
+  "run_fingerprint": "07e1f41ab4290db66d2fc27e6ccfabffee4313f3b4f90455a7d0307e556e3bf4"
+}

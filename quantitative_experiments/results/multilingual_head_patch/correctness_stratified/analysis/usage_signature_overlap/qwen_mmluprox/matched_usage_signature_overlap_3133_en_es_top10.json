@@ -1,0 +1,340 @@
+{
+  "condition": "qwen_mmluprox",
+  "model": "Qwen3-8B",
+  "dataset": "MMLU-ProX",
+  "parallel_id": "3133",
+  "languages": [
+    "en",
+    "es"
+  ],
+  "answered_correctly_in_all_five_languages": true,
+  "all_language_outcomes": {
+    "en": {
+      "correct_answer": "D",
+      "model_choice": "D",
+      "correct": true
+    },
+    "ru": {
+      "correct_answer": "D",
+      "model_choice": "D",
+      "correct": true
+    },
+    "es": {
+      "correct_answer": "D",
+      "model_choice": "D",
+      "correct": true
+    },
+    "de": {
+      "correct_answer": "D",
+      "model_choice": "D",
+      "correct": true
+    },
+    "ar": {
+      "correct_answer": "D",
+      "model_choice": "D",
+      "correct": true
+    }
+  },
+  "metric": "pct_var_mean_incorrect",
+  "selection": {
+    "n_all_five_correct_candidates": 113,
+    "median_spearman_correlation": 0.35728452069493516,
+    "median_top_k_overlap_count": 5.0,
+    "reason": "all-five-correct question with the median top-k overlap count and Spearman correlation closest to the all-correct median"
+  },
+  "statistics": {
+    "spearman_correlation": 0.35477928617645055,
+    "top_k": 10,
+    "overlap_count": 5,
+    "jaccard_at_k": 0.3333333333333333
+  },
+  "top_ranked_locations": {
+    "en": [
+      {
+        "rank": 1,
+        "layer": 24,
+        "attention_group": 7,
+        "value": 41.026676177978516,
+        "shared_top_k": true
+      },
+      {
+        "rank": 2,
+        "layer": 19,
+        "attention_group": 4,
+        "value": 9.971704483032227,
+        "shared_top_k": true
+      },
+      {
+        "rank": 3,
+        "layer": 29,
+        "attention_group": 1,
+        "value": 9.584547996520996,
+        "shared_top_k": true
+      },
+      {
+        "rank": 4,
+        "layer": 26,
+        "attention_group": 6,
+        "value": 6.762962818145752,
+        "shared_top_k": true
+      },
+      {
+        "rank": 5,
+        "layer": 15,
+        "attention_group": 1,
+        "value": 4.8861846923828125,
+        "shared_top_k": false
+      },
+      {
+        "rank": 6,
+        "layer": 35,
+        "attention_group": 2,
+        "value": 4.374914169311523,
+        "shared_top_k": false
+      },
+      {
+        "rank": 7,
+        "layer": 30,
+        "attention_group": 1,
+        "value": 4.297991752624512,
+        "shared_top_k": true
+      },
+      {
+        "rank": 8,
+        "layer": 13,
+        "attention_group": 0,
+        "value": 4.262697219848633,
+        "shared_top_k": false
+      },
+      {
+        "rank": 9,
+        "layer": 19,
+        "attention_group": 7,
+        "value": 3.569643020629883,
+        "shared_top_k": false
+      },
+      {
+        "rank": 10,
+        "layer": 11,
+        "attention_group": 0,
+        "value": 3.321065664291382,
+        "shared_top_k": false
+      }
+    ],
+    "es": [
+      {
+        "rank": 1,
+        "layer": 24,
+        "attention_group": 7,
+        "value": 44.908416748046875,
+        "shared_top_k": true
+      },
+      {
+        "rank": 2,
+        "layer": 22,
+        "attention_group": 0,
+        "value": 15.848159790039062,
+        "shared_top_k": false
+      },
+      {
+        "rank": 3,
+        "layer": 29,
+        "attention_group": 1,
+        "value": 10.957681655883789,
+        "shared_top_k": true
+      },
+      {
+        "rank": 4,
+        "layer": 30,
+        "attention_group": 1,
+        "value": 8.207884788513184,
+        "shared_top_k": true
+      },
+      {
+        "rank": 5,
+        "layer": 19,
+        "attention_group": 4,
+        "value": 7.24314546585083,
+        "shared_top_k": true
+      },
+      {
+        "rank": 6,
+        "layer": 26,
+        "attention_group": 6,
+        "value": 6.057493209838867,
+        "shared_top_k": true
+      },
+      {
+        "rank": 7,
+        "layer": 22,
+        "attention_group": 2,
+        "value": 3.8767054080963135,
+        "shared_top_k": false
+      },
+      {
+        "rank": 8,
+        "layer": 21,
+        "attention_group": 7,
+        "value": 3.560744285583496,
+        "shared_top_k": false
+      },
+      {
+        "rank": 9,
+        "layer": 14,
+        "attention_group": 5,
+        "value": 3.521123170852661,
+        "shared_top_k": false
+      },
+      {
+        "rank": 10,
+        "layer": 12,
+        "attention_group": 6,
+        "value": 3.289666175842285,
+        "shared_top_k": false
+      }
+    ]
+  },
+  "shared_top_ranked_locations": [
+    {
+      "layer": 19,
+      "attention_group": 4,
+      "en_rank": 2,
+      "es_rank": 5,
+      "en_value": 9.971704483032227,
+      "es_value": 7.24314546585083
+    },
+    {
+      "layer": 24,
+      "attention_group": 7,
+      "en_rank": 1,
+      "es_rank": 1,
+      "en_value": 41.026676177978516,
+      "es_value": 44.908416748046875
+    },
+    {
+      "layer": 26,
+      "attention_group": 6,
+      "en_rank": 4,
+      "es_rank": 6,
+      "en_value": 6.762962818145752,
+      "es_value": 6.057493209838867
+    },
+    {
+      "layer": 29,
+      "attention_group": 1,
+      "en_rank": 3,
+      "es_rank": 3,
+      "en_value": 9.584547996520996,
+      "es_value": 10.957681655883789
+    },
+    {
+      "layer": 30,
+      "attention_group": 1,
+      "en_rank": 7,
+      "es_rank": 4,
+      "en_value": 4.297991752624512,
+      "es_value": 8.207884788513184
+    }
+  ],
+  "questions": [
+    {
+      "language": "en",
+      "sample": {
+        "sample_index": 2850,
+        "sample_id": "3133",
+        "parallel_id": "3133",
+        "language": "en",
+        "correct_idx": 3,
+        "generated_idx": 3,
+        "target_idx": 3,
+        "generated_label": "D",
+        "correct_label": "D",
+        "n_choice_order_variants": 4
+      },
+      "question": "Which statement about variation is true?",
+      "options": [
+        {
+          "label": "A",
+          "text": "All phenotypic variation is the result of genotypic variation.",
+          "is_correct": false,
+          "is_model_choice": false
+        },
+        {
+          "label": "B",
+          "text": "All genetic variation produces phenotypic variation.",
+          "is_correct": false,
+          "is_model_choice": false
+        },
+        {
+          "label": "C",
+          "text": "All nucleotide variability results in neutral variation.",
+          "is_correct": false,
+          "is_model_choice": false
+        },
+        {
+          "label": "D",
+          "text": "All new alleles are the result of nucleotide variability.",
+          "is_correct": true,
+          "is_model_choice": true
+        }
+      ],
+      "correct_answer": "D",
+      "model_choice": "D",
+      "category": "biology",
+      "source": "ori_mmlu-high_school_biology"
+    },
+    {
+      "language": "es",
+      "sample": {
+        "sample_index": 2852,
+        "sample_id": "3133",
+        "parallel_id": "3133",
+        "language": "es",
+        "correct_idx": 3,
+        "generated_idx": 3,
+        "target_idx": 3,
+        "generated_label": "D",
+        "correct_label": "D",
+        "n_choice_order_variants": 4
+      },
+      "question": "¿Qué afirmación sobre la variación es verdadera?",
+      "options": [
+        {
+          "label": "A",
+          "text": "Toda la variación fenotípica es el resultado de la variación genotípica.",
+          "is_correct": false,
+          "is_model_choice": false
+        },
+        {
+          "label": "B",
+          "text": "Toda la variación genética produce variación fenotípica.",
+          "is_correct": false,
+          "is_model_choice": false
+        },
+        {
+          "label": "C",
+          "text": "Toda la variabilidad nucleotídica resulta en variación neutral.",
+          "is_correct": false,
+          "is_model_choice": false
+        },
+        {
+          "label": "D",
+          "text": "Todos los alelos nuevos son el resultado de la variabilidad nucleotídica.",
+          "is_correct": true,
+          "is_model_choice": true
+        }
+      ],
+      "correct_answer": "D",
+      "model_choice": "D",
+      "category": "biology",
+      "source": "ori_mmlu-high_school_biology"
+    }
+  ],
+  "shared_color_scale": true,
+  "clip_percentile": 99.5,
+  "dataset_paths": {
+    "en": "/home/kareem.elzeky/.cache/huggingface/datasets/li-lab___mmlu-pro_x/en/0.0.0/8e6106a6c6ce1c5027e66cc338143cf997b2aa09/mmlu-pro_x-test.arrow",
+    "es": "/home/kareem.elzeky/.cache/huggingface/datasets/li-lab___mmlu-pro_x/es/0.0.0/8e6106a6c6ce1c5027e66cc338143cf997b2aa09/mmlu-pro_x-test.arrow"
+  },
+  "sweep_dir": "/home/kareem.elzeky/thesis3/quantitative_experiments/qwen_outputs/mmluprox/multilingual_head_patch/correctness_stratified"
+}

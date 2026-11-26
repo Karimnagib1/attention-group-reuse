@@ -1,0 +1,8 @@
+# Install in the Python 3.11 Conda thesis environment.
+transformers[mistral-common]==5.0.0
+torch>=2.4
+accelerate>=1.0
+datasets>=3.0
+numpy
+pyyaml
+tqdm

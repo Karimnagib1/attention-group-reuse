@@ -1,0 +1,24 @@
+io:
+  input_dir: llama_outputs/mmluprox/multilingual_head_patch/test
+  output_dir: llama_outputs/mmluprox/multilingual_head_patch/test_baselines_layerwise
+
+baseline:
+  metrics:
+    - pct_var_mean_incorrect
+    - pct_var_max_incorrect
+    - rank_drop_correct
+
+  # Provide many languages; script runs every 2-language combination.
+  # Example here runs: en-ar, en-es, ar-es.
+  languages: ["en", "ar", "es", "ru", "de"]
+  # languages: ['acm_Arab', 'deu_Latn', 'eng_Latn', 'rus_Cyrl', 'spa_Latn']
+
+  # options: skip | zero | one_if_equal_else_zero
+  degenerate_spearman: skip
+
+  n_shuffles: 500
+  seed: 123
+  n_workers: 8
+
+  # Saves [n_shuffles, n_layers] arrays for each metric.
+  save_distributions_npz: true
