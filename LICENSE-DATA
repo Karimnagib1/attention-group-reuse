@@ -1,0 +1,22 @@
+Data license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Kareem Elzeky, Kentaro Inui, Ekaterina Shutova, Thamar Solorio
+
+The data in this repository is licensed under CC BY 4.0. This covers the
+latent-country dataset (data/) and all saved experimental results: evaluation
+outputs, importance tensors, analysis tables, figures and run records.
+Source code is licensed separately under the MIT License (see LICENSE).
+
+You are free to share and adapt the data for any purpose, provided you give
+appropriate credit by citing the paper "Same Question, Shared Attention Groups?
+A Causal Study of Cross-Lingual Generalization", indicate if changes were made,
+and do not apply legal terms that restrict others from doing anything the
+license permits.
+
+Summary: https://creativecommons.org/licenses/by/4.0/
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The saved results contain question IDs, answer labels and numerical scores
+derived from third-party models and benchmarks, but no benchmark text and no
+model weights. Those models (Qwen3-8B, Llama-3.1-8B, Ministral-3-14B) and
+benchmarks (MMLU-ProX, Belebele) remain under their own licenses.

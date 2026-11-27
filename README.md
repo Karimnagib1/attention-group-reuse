@@ -146,6 +146,13 @@ cd .. && PYTHONPATH=. python -m pytest review/tests
 
 These are CPU tests with tiny randomly initialized models; they do not download weights.
 
+## License
+
+- **Code:** MIT License (`LICENSE`).
+- **Data:** CC BY 4.0 (`LICENSE-DATA`). This covers the latent-country dataset in `data/` and all saved results.
+
+The models and benchmarks used remain under their own licenses.
+
 ## Citation
 
 Please cite the paper if you use this code or data.
